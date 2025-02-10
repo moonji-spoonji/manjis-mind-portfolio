@@ -1,0 +1,351 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Allura&family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Indie+Flower&family=Lobster&family=Luckiest+Guy&family=Press+Start+2P&family=Reenie+Beanie&family=Rubik+Bubbles&family=Satisfy&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titan+One&display=swap');
+
+:root {
+    --light-brown: #fd9657;
+    --dark-brown: #672524;
+    --white: #ffff;
+
+    --intro-font: "Titan One", serif;
+    --manji-mind-size: 3rem;
+    --Mono:  "Space Mono", serif;
+
+    --title-size: 4rem;
+    --title-font: "Rubik Bubbles", serif;
+
+
+    --handwriting: "Indie Flower", serif;
+    /* --handwriting: "Reenie Beanie", serif; */
+    --reenie: "Reenie Beanie", serif;
+    --titan: "Titan One", serif;
+    --space-mono: "Space Mono", serif;
+    --shadows: "Shadows Into Light", serif;
+    --satisfy: "Satisfy", serif;
+    --press-start: "Press Start 2P", serif;
+    --lucky: "Luckiest Guy", serif; 
+    --lobster: "Lobster", serif;
+    --caveat: "Caveat", serif;
+    --amatic: "Amatic SC", serif;
+    --allura: "Allura", serif;
+    --agu: "Agu Display", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html, main {
+    display: flex;
+    flex-direction: column;
+
+
+    width: 100vw;
+    /* min-height: 100svh; */
+    overflow-x: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--light-brown);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    /* margin: 0; */
+    /* margin-top: 4rem; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 80%;
+    /* max-width: 1300px; */
+    column-gap: 4rem;
+    row-gap: 4rem;
+    gap: 4rem;
+}
+
+.intro {
+    width: 25rem;
+    
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    
+    text-align: center;
+}
+
+.intro .title {
+    font-family: var(--intro-font);
+    font-size: var(--manji-mind-size);
+    margin-bottom: 0.75rem;
+}
+
+.intro .subheading {
+    font-style: italic;
+    font-family: var(--Mono);
+    font-size: 0.85rem;
+}
+
+.category {
+    text-align: center;
+    font-family: var(--title-font); 
+    font-size: 1.75rem;
+}
+
+.box {
+    padding: 1rem;
+    /* margin: 5rem; */
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    box-shadow: 7px 12px 0px black;
+    background-color: var(--white);
+    transition: all 0.5s ease-in-out;
+}
+/* 
+.sect h1 {
+    text-align: center;
+} */
+
+.sect h1 {
+    color: var(--white);
+    font-size: var(--title-size);
+    font-family: var(--title-font);
+    /* letter-spacing: 0.25rem; */
+    /* text-align: center; */
+
+    /* margin: 1.25rem 0; */
+}
+
+.thisisme {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.rap {
+    font-family: var(--handwriting);
+    /* font-size: 1.5rem; */
+    font-size: 2.2rem;
+
+    line-height: 2.5rem;
+    /* word-spacing: 0.5rem; */
+    letter-spacing: 0.1rem;
+    text-wrap: wrap;
+
+    margin: 1rem;
+}
+
+.mitchie {
+    transform: rotate(-90deg);
+    position: absolute;
+    /* top: 0; */
+    right: 0;
+    width: 200px;
+}
+
+.drax {
+    position: absolute;
+    /* left: 0; */
+    right: 0;
+    bottom: 0;
+    transform: rotate(-90deg);
+   
+    width: 300px;
+}
+
+.header-container {
+    display: inline-block; /* Makes sure it only takes the necessary space */
+
+    display: flex;
+    align-items: flex-end; /* Align bottom of the text */
+    gap: 10px; /* Space between the main heading and subtext */
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+}
+
+.more-options {
+    margin-top: 5em;
+    font-family: var(--space-mono);
+}
+
+.click {
+    font-size: 2.75rem;
+    /* margin: 0; */
+}
+
+.header-container, 
+ul, 
+ol {
+    margin: 0.75rem 3rem;
+    text-align: left;
+}
+
+li {
+    font-size: 2.5rem;
+    /* list-style-type: "\2728 "; */
+    margin-top: 0.75rem;
+}
+
+li::before {
+    content: "\2728 ";
+    padding-right: 10px;
+}
+
+.subtext {
+    /* position: absolute; */
+    left: 100%; /* Moves it to the right of the heading */
+    bottom: 0; /* Aligns to the bottom of the heading */
+    font-style: italic;
+}
+
+p {
+    white-space: pre-line; /* This ensures that any extra lines in the HTML are converted into breaks. */
+    /* margin: auto 2rem; */
+    max-width: 60rem;
+}
+
+p + ol {
+    margin: 2rem;
+}
+
+.explain {
+    font-family: var(--agu);
+    /* font-family: var(--amatic); */
+    /* font-family: var(--allura); */
+    /* font-family: var(--caveat); */
+    font-family: var(--lobster);
+    /* font-family: var(--lucky); */
+    font-family: var(--Mono);
+    /* font-family: var(--press-start); */
+    /* font-family: var(--satisfy); */
+    font-family: var(--shadows);
+    font-family: var(--space-mono);
+    /* font-family: var(--titan);     */
+
+    font-size: 2rem;
+    font-size: 1.5rem;
+    /* word-spacing: 0.75rem; */
+    line-height: 2.7rem;
+    /* font-weight: 900; */
+    margin-top: 0.5rem;
+}
+
+/* sticky Back To Top button in bottom left-hand corner */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    background-color: var(--dark-brown);
+    background-color: var(--light-brown);
+    /* background-color: black; */
+    padding: 1rem;
+    border: 0.2rem solid black;
+    /* border: 0.2rem solid white; */
+    border-radius: 1rem;
+    box-shadow: 7px 8px 0px black;
+    /* box-shadow: 7px 8px 0px white; */
+
+    color: white;
+    color: black;
+    /* color: var(--lsight-brown); */
+    font-family: var(--handwriting);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Container for question and answer */
+.qa-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* Style for the question (left side, vertical) */
+.question {
+    position: absolute;
+    left: 5%;
+    top: 75%;
+    transform: translateY(-50%) rotate(-90deg); /* Rotate to make it vertical */
+    transform-origin: left center;
+    white-space: nowrap;
+    font-family: var(--space-mono);
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Style for the answer (top center) */
+.answer h2 {
+    font-weight: bold;
+}
+
+.answer {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--title-size);
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for answer description (paragraph under answer) */
+.answer  p {
+    font-family: var(--space-mono);
+    font-size: 1.5rem;
+    /* max-width: 60rem; */
+    text-align: left;
+    margin-top: 1rem; /* Adjust spacing from answer */
+}
+
+.florida, 
+.answer img {
+    width: 40rem;
+    margin-top: 3rem;
+}
+
+.floridaman {
+    text-decoration: underline;
+}
+
+small {
+    position: relative;
+    bottom: -17rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+sup {
+    font-size: 1rem;
+    font-weight: bold;
+    vertical-align: super;
+}
