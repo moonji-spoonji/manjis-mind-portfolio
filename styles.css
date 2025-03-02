@@ -34,6 +34,11 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 body, html, main {
     display: flex;
     flex-direction: column;
@@ -57,16 +62,46 @@ body, html, main {
 section {
     /* margin: 0; */
     /* margin-top: 4rem; */
-    height: 100vh;
+    min-height: 100vh;
+    /* min-height: auto; */
+    min-height: min(100vh, auto);
+    max-height: 200vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    width: 80%;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+em, i {
+    font-style: italic;
+}
+
+.two-col {
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.hobby-pics {
+    display: grid;
+    /* grid-template-columns: repeat(2, 20rem); */
+    width: 42rem;
+
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));    
+    gap: 0.5rem;
+}
+
+.hobby-pics img {
+    width: 20rem;
+    /* margin: 0.5rem; */
 }
 
 .home {
@@ -79,13 +114,13 @@ a {
 
 .categories {
     display: grid;
-    grid-template-columns: repeat(3, 20rem);
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    width: 80%;
+    /* grid-template-columns: repeat(3, 20rem); */
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    width: 20%;
     /* max-width: 1300px; */
-    column-gap: 4rem;
-    row-gap: 4rem;
-    gap: 4rem;
+    /* column-gap: 4rem;
+    row-gap: 4rem; */
+    gap: 3rem;
 }
 
 .intro {
@@ -107,7 +142,8 @@ a {
 .intro .subheading {
     font-style: italic;
     font-family: var(--Mono);
-    font-size: 0.85rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
 }
 
 .category {
@@ -115,6 +151,8 @@ a {
     font-family: var(--title-font); 
     font-size: 1.75rem;
 }
+
+
 
 .box {
     padding: 1rem;
@@ -125,22 +163,15 @@ a {
     background-color: var(--white);
     transition: all 0.5s ease-in-out;
 }
-/* 
-.sect h1 {
-    text-align: center;
-} */
 
 .sect h1 {
     color: var(--white);
     font-size: var(--title-size);
     font-family: var(--title-font);
-    /* letter-spacing: 0.25rem; */
-    /* text-align: center; */
-
-    /* margin: 1.25rem 0; */
+    padding-top: 1rem;
 }
 
-.thisisme {
+.sect {
     position: relative;
     width: 100vw;
     display: flex;
@@ -149,17 +180,33 @@ a {
     align-items: center;
 }
 
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align everything to the left */
+    width: 50%; /* Set a container width */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.poem-container, .more-options {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.more-options {
+    margin-top: 5em;
+    font-family: var(--space-mono);
+}
+
 .rap {
-    font-family: var(--handwriting);
-    /* font-size: 1.5rem; */
-    font-size: 2.2rem;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 1rem 0;
 
-    line-height: 2.5rem;
-    /* word-spacing: 0.5rem; */
-    letter-spacing: 0.1rem;
-    text-wrap: wrap;
-
-    margin: 1rem;
 }
 
 .mitchie {
@@ -181,35 +228,27 @@ a {
 }
 
 .header-container {
-    display: inline-block; /* Makes sure it only takes the necessary space */
-
     display: flex;
-    align-items: flex-end; /* Align bottom of the text */
     gap: 10px; /* Space between the main heading and subtext */
     flex-wrap: wrap; /* Allows wrapping if the screen is too small */
 }
 
-.more-options {
-    margin-top: 5em;
-    font-family: var(--space-mono);
-}
-
 .click {
-    font-size: 2.75rem;
-    /* margin: 0; */
+    font-size: 2.25rem;
 }
 
-.header-container, 
 ul, 
 ol {
-    margin: 0.75rem 3rem;
+    margin: 0.25rem 3rem;
     text-align: left;
 }
 
 li {
-    font-size: 2.5rem;
-    /* list-style-type: "\2728 "; */
+    display: flex;
+    align-items: center;
     margin-top: 0.75rem;
+
+    font-size: 2.5rem;
 }
 
 li::before {
@@ -227,8 +266,13 @@ li::before {
 p {
     white-space: pre-line; /* This ensures that any extra lines in the HTML are converted into breaks. */
     /* margin: auto 2rem; */
+
     max-width: 60rem;
+    font-size: 1.5rem;
+    font-family: var(--space-mono);
+    line-height: 2rem;
 }
+
 
 p + ol {
     margin: 2rem;
@@ -257,7 +301,11 @@ p + ol {
 }
 
 /* sticky Back To Top button in bottom left-hand corner */
-.back-to-top {
+.to-top, 
+.to-home,
+.to-art,
+.to-writing,
+.to-reading {
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -279,6 +327,31 @@ p + ol {
     font-size: 1.5rem;
     font-weight: 600;
 }
+
+.to-home {
+    /* top: 20px; */
+    /* bottom: auto; */
+    bottom: 100px;
+}
+
+.to-art {
+    /* top: 100px;
+    bottom: auto; */
+    bottom: 180px;
+}
+
+.to-writing{
+    /* top: 180px;
+    bottom: auto; */
+    bottom: 260px;
+}
+
+.to-reading {
+    /* top: 260px;
+    bottom: auto; */
+    bottom: 340px;
+}
+
 
 /* Container for question and answer */
 .qa-container {
@@ -319,7 +392,7 @@ p + ol {
 }
 
 /* Style for answer description (paragraph under answer) */
-.answer  p {
+.answer  p, h1 + p, .rap p {
     font-family: var(--space-mono);
     font-size: 1.5rem;
     /* max-width: 60rem; */
@@ -339,7 +412,7 @@ p + ol {
 
 small {
     position: relative;
-    bottom: -17rem;
+    bottom: -10rem;
     font-size: 1.15rem;
     font-weight: bold;
 }
@@ -348,4 +421,82 @@ sup {
     font-size: 1rem;
     font-weight: bold;
     vertical-align: super;
+}
+
+.card-container {
+    display: grid;
+    margin: 0 auto;
+    width: 65%;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+
+    align-items: flex-end;
+    margin: 3rem auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid black;
+    padding: 0.5rem;
+    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.45);
+
+    text-align: center;
+
+    font-family: var(--lobster);
+    font-size: 1.8rem;
+}
+
+.card .title {
+    margin-top: 1rem;
+}
+
+.wavelength {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+    padding: 2rem 0;
+}
+
+strong {
+    font-weight: 900;
+}
+
+img.chill {
+    /* scale:calc(0.15); */
+    width: 70px;
+    height: 50px;
+    margin: 0;
+    /* width: auto; */
+}
+
+@media (width < 1441px) {
+    .poems {
+        width: 80%;
+    }
+}
+
+
+@media (width < 770px ) {
+    .sect h1 {
+        font-size: 2.75rem;
+    }
+
+    p {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .poems {
+        width: 75%;
+    }
+
+    .card {
+        height: auto;
+        max-width: 25rem;
+    }
 }
