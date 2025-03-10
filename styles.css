@@ -45,7 +45,6 @@ body, html, main {
 
 
     width: 100vw;
-    /* min-height: 100svh; */
     overflow-x: hidden;
 
     margin: 0;
@@ -60,7 +59,7 @@ body, html, main {
 }
 
 section {
-    /* min-height: 100vh; */
+    min-height: 100vh;
 
     min-height: min(100vh, auto);
     max-height: 200vh;
