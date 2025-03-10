@@ -60,10 +60,8 @@ body, html, main {
 }
 
 section {
-    /* margin: 0; */
-    /* margin-top: 4rem; */
-    min-height: 100vh;
-    /* min-height: auto; */
+    /* min-height: 100vh; */
+
     min-height: min(100vh, auto);
     max-height: 200vh;
     display: flex;
@@ -92,8 +90,7 @@ em, i {
 
 .hobby-pics {
     display: grid;
-    /* grid-template-columns: repeat(2, 20rem); */
-    width: 42rem;
+    width: 45rem;
 
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));    
     gap: 0.5rem;
@@ -101,26 +98,22 @@ em, i {
 
 .hobby-pics img {
     width: 20rem;
-    /* margin: 0.5rem; */
 }
 
 .home {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     margin-bottom: 5rem;
 }
 
 .categories {
-    display: grid;
-    /* grid-template-columns: repeat(3, 20rem); */
-    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-    width: 20%;
-    /* max-width: 1300px; */
-    /* column-gap: 4rem;
-    row-gap: 4rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 3rem;
+    width: 100%; /* Make it take the full width of its parent */
+    max-width: 400px; /* Adjust this based on how wide you want it */
 }
 
 .intro {
@@ -152,11 +145,11 @@ em, i {
     font-size: 1.75rem;
 }
 
-
-
 .box {
+    width: 100%; /* Ensures all boxes are the same width */
+    max-width: 350px; /* Adjust as needed */
     padding: 1rem;
-    /* margin: 5rem; */
+    text-align: center;
     border: 0.2rem solid black;
     border-radius: 0.5rem;
     box-shadow: 7px 12px 0px black;
@@ -178,6 +171,10 @@ em, i {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+
+    min-height: min(100vh, auto);
+    max-height: 200vh;
+
 }
 
 .content-wrapper {
@@ -193,7 +190,6 @@ em, i {
 .poem-container, .more-options {
     display: flex;
     flex-direction: column;
-    width: 70%;
 }
 
 .more-options {
@@ -212,14 +208,12 @@ em, i {
 .mitchie {
     transform: rotate(-90deg);
     position: absolute;
-    /* top: 0; */
     right: 0;
     width: 200px;
 }
 
 .drax {
     position: absolute;
-    /* left: 0; */
     right: 0;
     bottom: 0;
     transform: rotate(-90deg);
@@ -248,7 +242,8 @@ li {
     align-items: center;
     margin-top: 0.75rem;
 
-    font-size: 2.5rem;
+    font-family: var(--Mono);
+    font-size: 1.8rem;
 }
 
 li::before {
@@ -273,6 +268,11 @@ p {
     line-height: 2rem;
 }
 
+p, 
+li {
+    word-spacing: -0.3rem;
+}
+
 
 p + ol {
     margin: 2rem;
@@ -280,17 +280,10 @@ p + ol {
 
 .explain {
     font-family: var(--agu);
-    /* font-family: var(--amatic); */
-    /* font-family: var(--allura); */
-    /* font-family: var(--caveat); */
     font-family: var(--lobster);
-    /* font-family: var(--lucky); */
     font-family: var(--Mono);
-    /* font-family: var(--press-start); */
-    /* font-family: var(--satisfy); */
     font-family: var(--shadows);
     font-family: var(--space-mono);
-    /* font-family: var(--titan);     */
 
     font-size: 2rem;
     font-size: 1.5rem;
@@ -312,57 +305,49 @@ p + ol {
 
     background-color: var(--dark-brown);
     background-color: var(--light-brown);
-    /* background-color: black; */
     padding: 1rem;
     border: 0.2rem solid black;
-    /* border: 0.2rem solid white; */
     border-radius: 1rem;
     box-shadow: 7px 8px 0px black;
-    /* box-shadow: 7px 8px 0px white; */
 
     color: white;
     color: black;
-    /* color: var(--lsight-brown); */
     font-family: var(--handwriting);
     font-size: 1.5rem;
     font-weight: 600;
 }
 
 .to-home {
-    /* top: 20px; */
-    /* bottom: auto; */
     bottom: 100px;
 }
 
 .to-art {
-    /* top: 100px;
-    bottom: auto; */
     bottom: 180px;
 }
 
 .to-writing{
-    /* top: 180px;
-    bottom: auto; */
     bottom: 260px;
 }
 
 .to-reading {
-    /* top: 260px;
-    bottom: auto; */
     bottom: 340px;
 }
-
 
 /* Container for question and answer */
 .qa-container {
     position: relative;
     width: 100vw;
     min-height: 100vh;
+
+    min-height: min(100vh, auto);
+    max-height: 200vh;
+
 }
 
 /* Style for the question (left side, vertical) */
 .question {
     position: absolute;
+    width: 100%;
     left: 5%;
     top: 75%;
     transform: translateY(-50%) rotate(-90deg); /* Rotate to make it vertical */
@@ -370,7 +355,6 @@ p + ol {
     white-space: nowrap;
     font-family: var(--space-mono);
     font-size: 1.75rem;
-    font-weight: bold;
     text-align: left;
 }
 
@@ -395,9 +379,13 @@ p + ol {
 .answer  p, h1 + p, .rap p {
     font-family: var(--space-mono);
     font-size: 1.5rem;
-    /* max-width: 60rem; */
     text-align: left;
     margin-top: 1rem; /* Adjust spacing from answer */
+}
+
+img {
+    max-width: 100%;
+
 }
 
 .florida, 
@@ -457,7 +445,6 @@ sup {
 .wavelength {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 
     padding: 2rem 0;
 }
@@ -467,16 +454,59 @@ strong {
 }
 
 img.chill {
-    /* scale:calc(0.15); */
     width: 70px;
     height: 50px;
     margin: 0;
-    /* width: auto; */
 }
+
 
 @media (width < 1441px) {
     .poems {
+        width: 50vw;
+    }
+
+    .qa-container p {
+        width: 80vw;
+    }
+
+    .drax, .mitchie {
+        width: 13rem;
+    }
+
+    img .florida, 
+    img .manji {
+        max-width: 30%;
+    }
+
+    .click, 
+    ul li {
+        font-size: 1.65rem;
+    }
+    
+    li::before {
+        content: "\2728 ";
+        padding-right: 10px;
+    }
+
+    p {
         width: 80%;
+    }
+
+    .sect p,
+    .answer p {
+        font-size: 1.2rem;
+    }
+
+    .hobby-pics {
+        display: grid;
+        width: 25rem;
+    
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));    
+        gap: 0.5rem;
+    }
+    
+    .hobby-pics img {
+        width: 15rem;
     }
 }
 
@@ -486,11 +516,11 @@ img.chill {
         font-size: 2.75rem;
     }
 
-    p {
-        width: 80%;
-        font-size: 1.5rem;
+    .sect {
+        margin-bottom: 3rem;
     }
 
+    /* POETRY */
     .poems {
         width: 75%;
     }
@@ -498,5 +528,115 @@ img.chill {
     .card {
         height: auto;
         max-width: 25rem;
+    }
+
+    .drax, .mitchie {
+        width: 8rem;
+    }
+
+    .answer {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* NAVIGATION BUTTONS */
+    .to-top, 
+    .to-home,
+    .to-art,
+    .to-writing,
+    .to-reading {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .to-home {
+        left: 130px;
+    }
+
+    .to-art {
+        left: 235px;
+    }
+
+    .to-writing{
+        left: 315px;
+    }
+
+    .to-reading {
+        left: 425px;
+    }
+
+    .question {
+        left: 50%;
+        top: 0%;
+        transform: translateY(0%) rotate(0deg); /* Rotate it back to normal to make it horizontal */
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .answer, .sect {
+        padding-top: 1rem;
+    }
+
+    .question h1 {
+        font-size: 2.35rem;
+    }
+
+    .answer {
+        font-size: 2rem;
+    }
+
+    ul li,
+    ol li {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (width < 441px) {
+
+    .content-wrapper {
+        width: 80vw;
+    }
+
+    .rap p,
+    .explain {
+        font-size: 1.25rem;
+    }
+
+    .explain {
+        line-height: 1.75rem;
+    }
+
+    p, 
+    h1 + p, 
+    h2 + p{
+        width: 85%;
+        font-size: 1.25rem;
+        line-height: 1.4rem;
+
+    }
+
+    .answer h2 + p {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+
+    ul li,
+    ol li {
+        font-size: 1.25rem;
+    }
+
+    .mitchie, 
+    .drax, 
+    .hobby-pics > img {
+        display: none;
+    }
+
+    .two-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
