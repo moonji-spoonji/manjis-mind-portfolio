@@ -1,0 +1,46 @@
+.welcome {
+    font-size: 2rem;
+    /* padding: 0.5rem 0; */
+    /* text-decoration: underline; */
+}
+
+.welcome + p {
+    padding: 1rem 0;
+}
+
+.poem-img {
+    margin: 2rem 0;
+    width: 40%;
+}
+
+.card .title {
+    line-height: 2.25rem;
+}
+
+@media (width < 3000px) {
+    .poem-img {
+        width: 35%;
+    }
+}
+
+@media (width < 2000px) {
+    .poem-img {
+        width: 50%;
+    }    
+}
+
+@media (width < 1025px){
+    .poem-img {
+        width: 65%;
+    }
+    .hidden .last {
+        gap: 100px;
+        display: none;
+    }
+}
+
+@media (width < 690px) {
+    .hidden .last {
+        display: none;
+    }
+}

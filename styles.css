@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Allura&family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Indie+Flower&family=Lobster&family=Luckiest+Guy&family=Press+Start+2P&family=Reenie+Beanie&family=Rubik+Bubbles&family=Satisfy&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titan+One&display=swap');
 
 :root {
-    --light-brown: #fd9657;
-    --dark-brown: #672524;
+    --bg-color: #fd9657;
+    --bg-color: #f4a693;
+    --bg-color: #ff9b9b;
     --white: #ffff;
 
     --intro-font: "Titan One", serif;
@@ -50,7 +51,7 @@ body, html, main {
     margin: 0;
     padding: 0;
 
-    background-color: var(--light-brown);
+    background-color: var(--bg-color);
 
     display: flex;
     flex-direction: column;
@@ -302,8 +303,12 @@ p + ol {
     bottom: 20px;
     left: 20px;
 
+<<<<<<< Updated upstream
     background-color: var(--dark-brown);
     background-color: var(--light-brown);
+=======
+    background-color: var(--bg-color);
+>>>>>>> Stashed changes
     padding: 1rem;
     border: 0.2rem solid black;
     border-radius: 1rem;
@@ -320,11 +325,19 @@ p + ol {
     bottom: 100px;
 }
 
+<<<<<<< Updated upstream
 .to-art {
     bottom: 180px;
 }
 
 .to-writing{
+=======
+.to-writing {
+    bottom: 180px;
+}
+
+.to-art{
+>>>>>>> Stashed changes
     bottom: 260px;
 }
 
@@ -419,14 +432,14 @@ sup {
     gap: 3rem;
 
     align-items: flex-end;
-    margin: 3rem auto;
+    /* margin: 5rem auto; */
 }
 
 .card {
     display: flex;
     flex-direction: column;
 
-    border: 2px solid black;
+    border: 2px solid #e38b8b;
     padding: 0.5rem;
     background-color: var(--white);
     background-color: rgba(255, 255, 255, 0.45);
@@ -435,6 +448,9 @@ sup {
 
     font-family: var(--lobster);
     font-size: 1.8rem;
+
+    /* margin-bottom: 5.5rem; */
+
 }
 
 .card .title {
@@ -458,6 +474,17 @@ img.chill {
     margin: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+/* .poem-img {
+        width: 200px;
+} */
+
+.hidden {
+    visibility: hidden;
+}
+
+>>>>>>> Stashed changes
 
 @media (width < 1441px) {
     .poems {
@@ -507,6 +534,10 @@ img.chill {
     .hobby-pics img {
         width: 15rem;
     }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 }
 
 
@@ -638,4 +669,8 @@ img.chill {
         align-items: center;
         justify-content: center;
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
