@@ -308,8 +308,12 @@ p + ol {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     background-color: var(--dark-brown);
     background-color: var(--light-brown);
+=======
+    background-color: var(--bg-color);
+>>>>>>> Stashed changes
 =======
     background-color: var(--bg-color);
 >>>>>>> Stashed changes
@@ -346,11 +350,19 @@ p + ol {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .to-art {
     bottom: 180px;
 }
 
 .to-writing{
+=======
+.to-writing {
+    bottom: 180px;
+}
+
+.to-art{
+>>>>>>> Stashed changes
 =======
 .to-writing {
     bottom: 180px;
@@ -527,7 +539,10 @@ img.chill {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -548,6 +563,9 @@ img.chill {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -611,6 +629,10 @@ img.chill {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
@@ -762,7 +784,11 @@ img.chill {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
 =======
 }
 >>>>>>> Stashed changes
